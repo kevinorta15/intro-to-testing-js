@@ -41,5 +41,38 @@ describe("sayHello", function () {
     });
     it('should return the string "Hello, World! when false', function () {
         expect(sayHello(false)).toBe("Hello, World!");
+    });})
+
+    describe("isEven", function () {
+        it('should be defined as a function', function () {
+            expect(typeof isFive).toBe("function");
+        });
+        it('should return true when given even input', function () {
+            expect(isEven(2)).toBe(true);
+        });
+        it('should return true when given an even negative input', function () {
+            expect(isEven(-4)).toBe(true);
+        });
+        it('should return false when given an odd  input', function () {
+            expect(isEven(3)).toBe(false);
+        });
+        it('should return false when given NaN', function () {
+            expect(isEven("banana")).toBe(false);
+        });
+        it('should return true when given an even integer', function () {
+            expect(isEven("8")).toBe(true);
+        });
+        it('should return false when given infinity', function () {
+            expect(isEven(Infinity)).toBe(false);
+        });
+        it('should return false when given a boolean', function () {
+            expect(isEven(true)).toBe(false);
+        });
+        it('should return false when given a boolean', function () {
+            expect(isEven(false)).toBe(false);
+        });
+        it('should return false when given an empty function', function () {
+            expect(isEven()).toBe(false);
+        });
+
     });
-});
